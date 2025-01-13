@@ -2,8 +2,16 @@
 
 ## Run
 
+### Ubuntu base
+
 ```
-git clone https://github.com/ryudenx/docker-geekbench.git
-docker build -t ryudenx/geekbench:latest docker-geekbench/
-docker run --rm ryudenx/geekbench:latest
+docker build -t ryudenx/geekbench-ubuntu:latest https://github.com/ryudenx/docker-geekbench.git -f Dockerfile_ubuntu
+docker run --rm -it --privileged ryudenx/geekbench-ubuntu:latest
+```
+
+### Rocky Linux base
+
+```
+docker build -t ryudenx/geekbench-rocky:latest https://github.com/ryudenx/docker-geekbench.git -f Dockerfile_rocky
+docker run --rm -it --privileged ryudenx/geekbench-rocky:latest
 ```
